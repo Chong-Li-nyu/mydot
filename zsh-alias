@@ -37,7 +37,7 @@ function uploadGitRepo(){
 	git commit -a -m "Fast update $(date)" 
 	git push 
 }
-alias fu = "uploadGitRepo"
+alias fu="uploadGitRepo"
 
 # Download from github and override current .zsh-alias
 function updatezsh(){
