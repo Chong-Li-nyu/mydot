@@ -43,7 +43,7 @@ alias lfu="localUpdate"
 
 # Upload to github repo 
 function fastUploadGitRepo(){
-	git commit -a -m "Fast update $(date)" 
+	git commit -a -m "Fast update: $1 $(date)" 
 	git push 
 }
 alias fu="fastUploadGitRepo"
