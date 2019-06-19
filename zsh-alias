@@ -1,6 +1,13 @@
 # alias starts{{{
 # ##############
 
+#kinit with password
+function kf(){
+  pbcopy < ~/.pass.temp
+  kinit -f
+}
+alias kf="kf"
+
 #brazil aliases
 alias bw="brazil ws"
 alias bwup="brazil ws use -p"
