@@ -32,19 +32,25 @@ function brc_build_a_package(){
 }
 alias brcbuild="brc_build_a_package"
 
+function localUpdate(){
+  cp -rf ~/Documents/dotfile/zsh-alias ~/.zsh-alias
+  source ~/.zshrc
+}
+alias lfu="localUpdate"
+
 # Upload to github repo 
-function uploadGitRepo(){
+function fastUploadGitRepo(){
 	git commit -a -m "Fast update $(date)" 
 	git push 
 }
-alias fu="uploadGitRepo"
+alias fu="fastUploadGitRepo"
 
 # Download from github and override current .zsh-alias
-function updatezsh(){
+function fastDownload(){
   wget -q https://raw.githubusercontent.com/Chong-Li-nyu/mydot/master/zsh-alias -O ~/.zsh-alias
   source ~/.zshrc
 }
-alias updateAlias="updatezsh"
+alias fd="fastDownload"
 
 # ##############
 #}}} alias ends
