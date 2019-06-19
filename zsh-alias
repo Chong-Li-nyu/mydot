@@ -33,7 +33,9 @@ function brc_build_a_package(){
 alias brcbuild="brc_build_a_package"
 
 function localUpdate(){
-  cp -rf ~/Documents/dotfile/zsh-alias ~/.zsh-alias
+  if [ -f ~/Documents/dotfile/zsh-alias ]; then
+    cp -rf ~/Documents/dotfile/zsh-alias ~/.zsh-alias
+  fi
   source ~/.zshrc
 }
 alias lfu="localUpdate"
