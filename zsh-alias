@@ -34,7 +34,7 @@ alias brcbuild="brc_build_a_package"
 
 # Download from github and override current .zsh-alias
 function updatezsh(){
-  wget -q https://github.com/Chong-Li-nyu/mydot/blob/master/zsh-alias -O ~/.zsh-alias
+  wget -q https://raw.githubusercontent.com/Chong-Li-nyu/mydot/master/zsh-alias -O ~/.zsh-alias
   source ~/.zshrc
 }
 alias updateAlias="updatezsh"
