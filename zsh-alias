@@ -8,6 +8,12 @@ function kf(){
 }
 alias kf="kf"
 
+# fast cd to path specified in a file
+function cdfile(){
+  cdd $(cat $1)
+}	
+alias cdf='cdfile'
+
 #brazil aliases
 alias bw="brazil ws"
 alias bwup="brazil ws use -p"
