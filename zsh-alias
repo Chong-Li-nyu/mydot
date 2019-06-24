@@ -8,6 +8,10 @@ function kf(){
 }
 alias kf="kf"
 
+# cd && ls
+function cdls(){ cd $1 && ls }
+alias cdd="cdls"
+
 # fast cd to path specified in a file
 function cdfile(){
   cdd $(cat $1)
@@ -33,10 +37,6 @@ alias gsh="git stash"
 
 # SSH tunnel for debugging
 alias dbgtunnel="ssh -N -L localhost:1337:localhost:1337  dev-dsk-chonamzn-1a-16bff4dc.us-east-1.amazon.com"
-
-# cd && ls
-function cdls(){ cd $1 && ls }
-alias cdd="cdls"
 
 # brazil-recursive-cmd
 alias brcall='brazil-recursive-cmd --allPackages brazil-build release'
