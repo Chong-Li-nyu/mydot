@@ -5,6 +5,9 @@
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
+# Add +X execution authority
+alias chmodx='_chmodx() { chmod +X $1;};_chmodx'
+
 #kinit with password
 function kf(){
   pbcopy < ~/.pass.temp
