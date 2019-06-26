@@ -1,6 +1,10 @@
 # alias starts{{{
 # ##############
 
+# On linux update it
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
 #kinit with password
 function kf(){
   pbcopy < ~/.pass.temp
