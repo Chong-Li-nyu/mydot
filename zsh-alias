@@ -1,6 +1,13 @@
 # alias starts{{{
 # ##############
 
+# Global source the .zshrc
+function global_window_source(){
+for _pane in $(tmux list-panes -a -F '#{pane_id}'); do
+  tmux send-keys -t ${_pane} 'source ~/.zshrc' C-m  ; done
+}
+alias gsource=global_window_source
+
 # Add +X execution authority
 alias chmodx='_chmodx() { chmod +X $1;};_chmodx'
 
@@ -22,6 +29,7 @@ function cdfile(){
 alias cdf='cdfile'
 
 #brazil aliases
+alias bb="brazil-build"
 alias bw="brazil ws"
 alias bwup="brazil ws use -p"
 # tmux aliases
