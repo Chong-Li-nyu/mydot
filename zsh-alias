@@ -43,12 +43,23 @@ alias nj="ninja-dev-sync"
 
 # git 
 alias grp="git rev-parse"
-alias ghead="git rev-parse HEAD"
-alias gh="git rev-parse HEAD"
 function ghead_counter(){
-  git rev-parse HEAD~$1
+  if [ ! $1 ]; then  
+    git rev-parse HEAD      
+  else
+    git rev-parse HEAD~$1
+  fi  
 }
-alias ghc="ghead_counter"
+alias gh="ghead_counter"
+function ghead_counter_detail(){
+  if [ ! $1 ]; then  
+    git show HEAD|head -n 5
+  else
+    git show HEAD~$1|head -n 5
+  fi
+}
+alias ghd="ghead_counter_detail"
+
 alias ggraph="git log --oneline --decorate --graph --all"
 alias gstu="git status -uno" # Ignore untracked files
 alias gst="git status"
