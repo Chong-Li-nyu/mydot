@@ -19,6 +19,7 @@ function kf(){
 alias kf="kf"
 
 # cd && ls
+alias bp='basename `pwd`'
 function cdls(){ cd $1 && ls }
 alias cdd="cdls"
 
