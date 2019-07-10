@@ -34,8 +34,10 @@ alias bw="brazil ws"
 alias bwup="brazil ws use -p"
 
 #brazil test shortcut
-alias bti="brazil-build single-integration-test -DtestClass="
-alias btu="brazil-build single-test -DtestClass="
+function bti(){ brazil-build single-integration-test -DtestClass=$1}
+function btu(){ brazil-build single-test -DtestClass=$1}
+alias bti="bti"
+alias btu="btu"
 
 # tmux aliases
 alias tls="tmux ls"
