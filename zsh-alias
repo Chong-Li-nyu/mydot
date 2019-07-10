@@ -32,6 +32,11 @@ alias cdf='cdfile'
 alias bb="brazil-build"
 alias bw="brazil ws"
 alias bwup="brazil ws use -p"
+
+#brazil test shortcut
+alias bti="brazil-build single-integration-test -DtestClass="
+alias btu="brazil-build single-test -DtestClass="
+
 # tmux aliases
 alias tls="tmux ls"
 alias tl="tmux ls"
