@@ -25,12 +25,17 @@ function cut8(){
 }
 alias ce='cut8'
 function crange(){
-  if (($# == 2)) ; then
-	echo "`bp`[`gh $1|ce`:`gh $2|ce`]"
+  if (($# == 1)) ; then
+	# current package path and ending to the HEAD 
+	echo "`bp`[`gh $1|ce`:`gh|ce`]"
   else
-	cd $1
-	echo "$1[`gh $2|ce`:`gh $3|ce`]"
-	cd -
+	  if (($# == 2)) ; then
+		echo "`bp`[`gh $1|ce`:`gh $2|ce`]"
+	  else
+		cd $1
+		echo "`basename $1`[`gh $2|ce`:`gh $3|ce`]"
+		cd $OLDPWD 
+	  fi  
   fi  
 }
 alias crange='crange'
