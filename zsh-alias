@@ -96,7 +96,7 @@ alias gst="git status"
 alias gsh="git stash"
 
 # SSH tunnel for debugging
-alias dbgtunnel="ssh -N -L localhost:1337:localhost:1337  dev-dsk-chonamzn-1a-16bff4dc.us-east-1.amazon.com"
+# alias dbgtunnel="ssh -N -L localhost:1337:localhost:1337  dev-dsk-chonamzn-1a-16bff4dc.us-east-1.amazon.com"
 
 # brazil-recursive-cmd
 alias brcall='brazil-recursive-cmd --allPackages brazil-build release'
