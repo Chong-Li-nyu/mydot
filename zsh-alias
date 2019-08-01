@@ -40,8 +40,9 @@ function crange(){
 }
 alias crange='crange'
 
-# cd && ls
 alias bp='basename `pwd`'
+
+# cd && ls
 function cdls(){ cd $1 && ls }
 alias cdd="cdls"
 
