@@ -125,7 +125,7 @@ alias lfu="localUpdate"
 
 # Upload to github repo 
 function fastUploadGitRepo(){
-	git commit -a -m "$1[$(date)]" 
+	git commit -a -m "$1\[$(date)\]" 
 	git push 
 }
 alias fu="fastUploadGitRepo"
