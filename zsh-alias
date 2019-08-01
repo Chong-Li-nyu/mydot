@@ -18,6 +18,23 @@ function kf(){
 }
 alias kf="kf"
 
+#crange for include cr
+#  cr --include "XTCSelfServiceWorkflow[b8671bbe:a5a6b6a0],XTCSelfServiceDirectorService[21e064b8:f7a5202c],XTCOnboardingTemplateConverter[d9bd7837:52ce2cbb]" --update-review CR-10313410
+function cut8(){
+	cut -c1-8
+}
+alias ce='cut8'
+function crange(){
+  if (($# == 2)) ; then
+	echo "`bp`[`gh $1|ce`:`gh $2|ce`]"
+  else
+	cd $1
+	echo "$1[`gh $2|ce`:`gh $3|ce`]"
+	cd -
+  fi  
+}
+alias crange='crange'
+
 # cd && ls
 alias bp='basename `pwd`'
 function cdls(){ cd $1 && ls }
