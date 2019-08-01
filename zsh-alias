@@ -94,6 +94,15 @@ alias ggraph="git log --oneline --decorate --graph --all"
 alias gstu="git status -uno" # Ignore untracked files
 alias gst="git status"
 alias gsh="git stash"
+alias gl="git log"
+function gitlog_without_pager(){
+  let line=1
+  if [ $1 ]; then
+	  line=$1
+  fi
+  git --no-pager log --decorate=short --pretty=oneline -n$line
+}
+alias gnp="gitlog_without_pager"
 
 # SSH tunnel for debugging
 # alias dbgtunnel="ssh -N -L localhost:1337:localhost:1337  dev-dsk-chonamzn-1a-16bff4dc.us-east-1.amazon.com"
